@@ -16,8 +16,8 @@ import java.util.stream.Stream;
 @Service
 public class FileService {
     public boolean fileUpload(MultipartFile file, int chunkNumber, int totalChunks, String key) throws IOException {
-        String uploadDir = "video";
-        String tempDir = "video/" + key;
+        String uploadDir = "uploaded";
+        String tempDir = "uploaded/" + key;
 
         File dir = new File(tempDir);
         if (!dir.exists()) {
